@@ -19,10 +19,10 @@ INSCOUNT64 = "./pin-2.13-62732-gcc.4.4.7-linux/source/tools/ManualExamples/obj-i
 
 
 ```sh
-$python pintool.py 
+$ python pintool.py 
 usage: pintool.py [-h] [-e] [-l LEN] [-c NUMBER] [-b CHARACTER] [-a ARCH]
-                   [-i INITPASS] [-s SIMBOL] [-d EXPRESSION]
-                   Filename
+                  [-i INITPASS] [-s SYMBOL] [-d EXPRESSION] [-r]
+                  Filename
 
 positional arguments:
   Filename       Program for playing with Pin Tool
@@ -33,14 +33,15 @@ optional arguments:
                  characters
   -l LEN         Length of password (Default: 10 )
   -c NUMBER      Charset definition for brute force (1-Lowercase, 2-Uppecase,
-                 3-Numbers, 4-Hexadecimal, 5-Punctuation, 6-All)
+                 3-Numbers, 4-Hexadecimal, 5-Punctuation, 6-Printable)
   -b CHARACTER   Add characters for the charset, example -b _-
-  -a ARCH        Program architecture 32 or 64 bits, -a 32 or -a 64
-  -i INITPASS    Inicial password characters, example -i CTF{
-  -s SIMBOL      Simbol for complete all password (Default: _ )
+  -a ARCH        Program architecture 32 or 64 bits, -b 32 or -b 64
+  -i INITPASS    Initial password characters, example -i CTF{
+  -s SYMBOL      Symbol for complete all password (Default: _ )
   -d EXPRESSION  Difference between instructions that are successful or not
                  (Default: != 0, example -d '== -12', -d '=> 900', -d '<= 17'
                  or -d '!= 32')
+  -r             Reverse order. Bruteforce from the last character
 ```
 
 
